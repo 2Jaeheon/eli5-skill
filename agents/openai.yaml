@@ -1,4 +1,4 @@
 interface:
   display_name: "ELI5"
-  short_description: "쉬운 한국어와 단계별 다이어그램으로 흐름과 구조를 설명"
-  default_prompt: "$eli5 이 내용을 쉬운 한국어로 설명해줘. 전체 흐름을 먼저 보여주고 세부 내용을 차례로 풀어줘. 순서, 구조, 특징의 차이와 상태 변화는 표 대신 알맞은 Mermaid 다이어그램으로 보여주고, 단계별 설명에는 각 단계의 다이어그램을 함께 넣어줘. 전문 용어는 정확하게 설명하고 기본은 중간 길이로 작성해줘."
+  short_description: "Simple Korean explanations with precise technical terms"
+  default_prompt: "$eli5 Explain this accurately in Korean simple enough for a five-year-old, adapt the depth to my knowledge, introduce difficult technical terms as English(한국어) with a simple definition, and show actual flow and step-by-step changes with useful diagrams while keeping a moderate length without repetition or rhetorical ornament."
