@@ -33,6 +33,8 @@ $eli5 이 코드가 실행될 때 값과 저장 상태가 어떻게 바뀌는지
 ## 파일 구성
 
 - `SKILL.md`: 설명 방식과 작성 후 확인 기준
+- `references/explanation-patterns.md`: 질문에 맞는 설명 방식과 예시 작성 기준
+- `references/diagram-explanations.md`: 전체 그림과 세부 그림, 코드와 글을 함께 설명하는 기준
 - `agents/openai.yaml`: 스킬 표시 이름, 짧은 소개와 기본 요청문
 
 현재 사용 중인 스킬 파일을 그대로 포함했습니다.

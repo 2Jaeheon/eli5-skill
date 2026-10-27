@@ -18,7 +18,7 @@ These instructions are written in English. Write explanations in Korean unless t
 
 Help a first-time reader understand the main point without prior knowledge. Use words and sentence structures simple enough for a five-year-old while preserving technical meaning and avoiding baby talk.
 
-Present the main idea before the details. Do not make the reader guess what an earlier sentence means or fill in missing connections between explanations.
+Begin with a very short, concrete introduction in everyday Korean, simple enough for a five-year-old: answer what the subject is or what happens in one or two sentences. Put necessary conditions in the introduction when leaving them out would mislead. Explain the details below it, without expecting the reader to infer missing connections.
 
 ## Adapt to the User While Keeping the Language Simple
 
@@ -31,33 +31,38 @@ Present the main idea before the details. Do not make the reader guess what an e
 
 ## From the Overall Flow to the Details
 
-1. Answer the main question directly and give a brief, simple overview.
+1. Answer the main question directly in one or two very simple sentences, then give the necessary explanation below.
 2. Explain the essential background and terms needed for the details.
 3. Develop the details in the order introduced in the overview.
 4. Explain what happens, why it happens, and how it connects to what follows, using only the detail needed.
-5. Use diagrams for aspects that become clearer through structure, such as order, composition, differences, relationships, flow, and state changes. In a step-by-step explanation, place each step's diagram close to that step's text.
+5. Identify the actual structure, order, interactions, differences, or state changes. Show those relationships with a diagram, then explain them in clear prose. Choose steps when the reader needs to learn a sequence; otherwise use the structure that fits the question.
 
 Do not add unnecessary outlines or steps to a simple question. Let the content determine the organization instead of forcing a fixed number of headings or list items.
 
 Explain only the necessary basics. Do not repeat the conclusion at the end or restate already explained content in a separate section.
 
+For questions asking how something works, how to use it, why something happens, or how concepts differ, read [references/explanation-patterns.md](references/explanation-patterns.md) and choose the relevant guidance. For a simple definition or a short rewrite, apply the main instructions directly without loading it. These patterns support judgment; they are not templates to fill out.
+
+When explaining a process, system, comparison, or state change with diagrams, read [references/diagram-explanations.md](references/diagram-explanations.md). Use its guidance to connect the overview, each meaningful part, and prose. For a simple definition without meaningful relationships, no reference or invented diagram is needed.
+
 ## Use Diagrams for Structured Information
 
 ### When a Diagram Helps
 
-- For each explanation request, identify aspects that benefit from structure: order, composition, containment, roles, differences, branches, interactions, cause and effect, or state changes. Show those aspects in diagrams even when the answer is short.
-- Use diagrams instead of tables. For comparisons of features or before-and-after behavior, place the subjects side by side in a diagram rather than a Markdown table.
+- For each explanation request, identify aspects that benefit from structure: order, composition, containment, roles, differences, branches, interactions, cause and effect, or state changes. Show those aspects in diagrams even when the answer is short. Do not skip a meaningful diagram merely because prose can also describe it.
+- Use diagrams instead of tables. For comparisons, show both subjects using the same comparison criteria and explain the practical difference in prose.
 - Use Mermaid code blocks by default. If the environment is known not to support rendering, provide a readable text diagram with the same structure.
 - Do not invent steps for a short definition with no meaningful structure or flow. When order or distinct parts matter, include a diagram even in a short explanation.
 - Use diagrams to show actual sequences, relationships, comparisons, and state changes in the subject. Do not attach a diagram to every item in a file list, writing-rule list, or change report, or invent explanation steps merely to increase diagram count.
 
 ### Place the Overview and Step Diagrams
 
-- For multiple steps or components, state the main answer first and show the overall relationship in a small diagram. Explain the details in that order.
-- In a step-by-step explanation, **include a diagram for every step.** A single overview at the beginning or end does not replace the diagrams for individual steps.
-- For each step, provide a short explanation, its diagram, and the key point to notice. Keep the key point to one or two sentences without repeating the whole explanation.
+- For multiple steps or components, give a simple opening and a small overview diagram before the detailed explanation. Then explain the parts in the same order.
+- For learning or studying a process, system, or concept in multiple substantive parts, including ordinary study requests and follow-up questions that explore a subject more deeply, include a focused diagram inside each substantive learning part, close to its prose. Do not require the user to say "detailed" or "step by step". The overview does not count as a part diagram. Group actions only when they teach the same single idea; do not invent steps or diagrams for administrative headings. Each focused diagram must show the actual action, interaction, condition, comparison, or before-and-after state, not merely repeat its title.
+- Explain each step in prose: who acts, what happens, why it happens, and how it connects to the next step. Diagrams and prose must both carry useful information; a diagram alone is not an explanation. Avoid repeating each label verbatim.
+- When code helps explain actual behavior, include a concise example alongside the relevant step's focused diagram and prose. Explain the important statements, their inputs and results, and show the same subjects and state changes in the diagram. State setup and example assumptions; do not imply illustrative code was executed.
 - Show who acts, what they do, which subject is affected, and the result. When state changes, include the state before and after the action.
-- When explaining features or structure in parts, place a diagram for the relevant part close to its explanation. Show only the current part rather than copying the entire overview repeatedly.
+- When a part needs its own diagram, place it close to the relevant prose. Show only the current part rather than copying the entire overview repeatedly.
 - Do not restate a diagram at length in prose. Let diagrams show relationships and changes while prose explains reasons and meaning, keeping the overall answer moderate in length.
 
 ### Choose the Diagram That Fits
@@ -108,6 +113,7 @@ Choose the form that best explains the current content. Do not reuse one form me
 - Do not introduce many new concepts at once. Explain essential concepts one at a time.
 - Use consistent names for the same subject and avoid unclear references.
 - Emphasize only what matters. Use numbered lists and flow diagrams for order, and diagrams with matching criteria for comparisons.
+- Default to plain prose without bold. Use Markdown bold only if it materially improves scanning and the sentence remains grammatically natural. If used, put an ordinary space immediately after the closing marker, including before a line break; never separate a Korean particle or ending from its noun to meet this rule. Instead remove the bold or rewrite the entire sentence. Do not bold a heading or label immediately followed by punctuation. Preserve exact code, filenames, quotations, and literal syntax. Before sending, inspect every bold span and remove it if its following space would make the Korean unnatural.
 - Do not use metaphors, analogies, or other rhetorical ornament. Describe actual subjects and actions directly.
 - Do not use middle-dot characters or Unicode arrow characters. Express order through sentences or numbers, and structure and relationships through diagrams.
 
@@ -129,14 +135,17 @@ Choose the form that best explains the current content. Do not reuse one form me
 - Does the depth fit the user's established knowledge while keeping words and sentences simple enough for a five-year-old?
 - Does each explanation connect naturally to the next without assuming unexplained background knowledge?
 - Is the length appropriate, with enough information to understand the answer?
-- Are order, structure, differences, flow, relationships, and state changes shown in diagrams when structure helps?
+- Is the opening one or two very simple sentences, followed by enough clear prose to explain the answer?
+- Is the organization suited to the question, and are meaningful relationships, processes, comparisons, and state changes shown in diagrams?
 - Are suitable diagrams used instead of tables?
-- Does every step in a step-by-step explanation have its own diagram, rather than relying only on the overview?
+- Does prose explain each necessary point, with diagrams supporting rather than replacing it?
+- When studying a topic across several substantive parts, does every part contain its own focused diagram and explanatory prose, rather than relying only on the overview?
 - Are the current participants, actions, results, and necessary before-and-after states clear?
 - Do diagrams match actual behavior and the prose, with examples and assumptions distinguished from facts?
 - Are technical terms accurate and English-formatting rules followed?
 - At the first relevant use of a difficult technical term, are the English name, Korean parenthetical name, and simple meaning provided, without unnecessary English labels for familiar words?
 - Are necessary conditions preserved while repetition, unnecessary basics, rhetorical wording, and unnecessary diagrams are removed?
+- Does each closing bold marker have a following space, with wording rewritten naturally where needed?
 - Is the answer free of metaphors, analogies, middle-dot characters, and Unicode arrow characters?
 
 Do not include this checklist in the answer unless the user requests it.
